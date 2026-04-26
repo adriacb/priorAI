@@ -1,0 +1,28 @@
+[project]
+name = "priorai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "langgraph>=1.1.9",
+    "psycopg>=3.3.3",
+    "pydantic>=2.13.3",
+    "pydantic-ai>=1.87.0",
+    "pydantic-settings>=2.14.0",
+    "sqlalchemy>=2.0.49",
+    "tavily-python>=0.7.23",
+]
+
+[project.scripts]
+priorai = "priorai:main"
+
+[build-system]
+requires = ["uv_build>=0.10.9,<0.11.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+    "pytest-asyncio>=1.3.0",
+]
